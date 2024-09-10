@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe Game</title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div id="theme-toggle">
+        <button id="toggle-theme" aria-label="تبديل الثيم">
+            <i class="fas fa-moon"></i> 
+            <i class="fas fa-sun"></i>  
+        </button>
+    </div>
+    <div id="player-setup">
+        <h2>إعداد اللاعبين</h2>
+        <input id="player1" type="text" placeholder="اسم اللاعب 1">
+        <input id="player2" type="text" placeholder="اسم اللاعب 2">
+        <button id="start-game">ابدأ اللعبة</button>
+    </div>
+    <div id="game-board" style="display:none;">
+        <div class="grid">
+            
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div id="status"></div>
+        <button id="reset" style="display:none;">أعد اللعبة</button>
+    </div>
+
+    <audio id="click-sound" src="click.mp3"></audio>
+    <audio id="win-sound" src="win.mp3"></audio>
+    <audio id="draw-sound" src="draw.mp3"></audio>
+    <footer class=""><p>  Created By Ahmed Magdy &copy;</p></footer>
+    <script src="main.js"></script>
+</body>
+</html>

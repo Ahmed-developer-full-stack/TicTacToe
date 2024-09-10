@@ -1,0 +1,200 @@
+:root {
+  --background-dark: #121212;
+  --background-light: #f0f0f0;
+  --text-dark: #ffffff;
+  --text-light: #333333;
+  --box-shadow-dark: 20px 20px 50px rgba(0, 0, 0, 0.7),
+    -20px -20px 50px rgba(255, 255, 255, 0.1);
+  --box-shadow-light: 20px 20px 50px rgba(163, 177, 198, 0.4),
+    -20px -20px 50px rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] {
+  --background: var(--background-dark);
+  --text-color: var(--text-dark);
+  --box-shadow: var(--box-shadow-dark);
+}
+
+[data-theme="light"] {
+  --background: var(--background-light);
+  --text-color: var(--text-light);
+  --box-shadow: var(--box-shadow-light);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--text-color);
+  transition: background 0.9s ease, color 0.9s ease;
+  -webkit-transition: background 0.9s ease, color 0.9s ease;
+  -moz-transition: background 0.9s ease, color 0.9s ease;
+  -ms-transition: background 0.9s ease, color 0.9s ease;
+  -o-transition: background 0.9s ease, color 0.9s ease;
+  direction: rtl;
+}
+
+#player-setup,
+#game-board {
+  text-align: center;
+  background-color: var(--background);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  width: 85%;
+  margin: 20px;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  max-width: 300px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: var(--background);
+  color: var(--text-color);
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, 0.2),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.2);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: inset 7px 7px 14px rgba(163, 177, 198, 0.3),
+    inset -7px -7px 14px rgba(255, 255, 255, 0.3);
+}
+
+button {
+  padding: 15px 30px;
+  margin-top: 20px;
+  border-radius: 15px;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: var(--background);
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 15px;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.cell {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.cell.clicked {
+  transform: scale(1.1);
+}
+
+#reset {
+  background-color: #f44336;
+}
+
+#reset:hover {
+  background-color: #ff7961;
+}
+
+#status {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  letter-spacing: 1.5px;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+#toggle-theme .fa-sun {
+  display: none;
+}
+
+[data-theme="dark"] #toggle-theme .fa-sun {
+  display: inline;
+}
+
+[data-theme="light"] #toggle-theme .fa-moon {
+  display: inline;
+}
+
+[data-theme="dark"] #toggle-theme .fa-moon {
+  display: none;
+}
+[data-theme="light"] #toggle-theme .fa-moon {
+  display: inline;
+  color: #000;
+}
+footer
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #a7a1a11a;
+    color: #f0f0f0;
+    font-weight: 700;
+    font-size:14px ;
+    border-radius: 25px 0 25px 0;
+    -webkit-border-radius: 25px 0 25px 0;
+    -moz-border-radius: 25px 0 25px 0;
+    -ms-border-radius: 25px 0 25px 0;
+    -o-border-radius: 25px 0 25px 0;
+}
